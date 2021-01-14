@@ -36,8 +36,8 @@
 			</h1>
 			<ul class="nav">
 				<li class="item"><a href="?discipline=development">Разработка</a></li>
-				<li class="item"><a href="?discipline=projection">Проектирование</a></li>
 				<li class="item"><a href="?discipline=design">Дизайн</a></li>
+				<li class="item"><a href="?discipline=projection">Проектирование</a></li>
 			</ul>
 		</header>
 		<main>

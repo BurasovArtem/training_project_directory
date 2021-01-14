@@ -60,7 +60,7 @@
 									</div>
 								</div>
 								<div class='similar'>
-									<p class='title'>Слова их этой же тематики:</p>
+									<p class='title'>Слова из этой же тематики:</p>
 									<div class='similar_container'>
 							";
 						$discipline = $feedback['discipline_section'];

@@ -244,3 +244,55 @@ main .definition {
       }
         main .definition .similar .similar_container .similar_item:hover { text-decoration: none; }
         main .definition .similar .similar_container .similar_item:first-child { margin-left: 0px; }
+
+@media screen and (max-width: 1200px) {
+  main { width: 100%; border-radius: 0px; }
+  main .definition { width: 100%; }
+  main .definition .back { width: 95%; }
+  main .definition .definition_container {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main .definition .definition_container .item_info { width: 95%; }
+  main .definition .similar { width: 95%; }
+  main .definition .definition_container .item_image { width: 80%; }
+  main .definition .definition_container .item_image img { width: 100%; }
+}
+
+@media screen and (max-width: 1100px) {
+  header { flex-direction: column; }
+}
+
+@media screen and (max-width: 1050px) {
+  main .directory { width: 90%; }
+}
+
+@media screen and (max-width: 750px) {
+  main .directory .definition_container .definition_item { flex-direction: column; }
+  main .directory .definition_container .definition_item .image {
+    width: 80%;
+    height: 50%;
+    margin-left: 10%;
+  }
+  main .directory .definition_container .definition_item .text { width: 100%; }
+  main .directory .definition_container .definition_item .text .title,
+  main .directory .definition_container .definition_item .text .discipline_section {
+    margin: 20px 0;
+  }
+  main .search { width: 80%; }
+  main .search p { width: 100%; }
+  main .search p input[type="search"] { width: 70%; }
+  main .search p input[type="submit"] { width: 30%; }
+  header { height: auto; }
+  header .nav {
+    flex-wrap: wrap;
+    margin: 0;
+    justify-content: center;
+  }
+  main .directory .definition_container .definition_item .text .title { word-break: break-all; }
+  main .definition .similar .similar_container { flex-direction: column; }
+  main .definition .similar .similar_container .similar_item { margin: 10px 0px; }
+  main .definition .definition_container .item_info .description { text-align: justify; }
+}

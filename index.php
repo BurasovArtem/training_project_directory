@@ -55,11 +55,21 @@
 										WHERE `title` LIKE '%$search%'";
 							$count = mysqli_query($conn, $request_count);
 							$result = mysqli_query($conn, $request);
+							echo "
+									<div class='back'>
+										<a href='index.php' class='text'>Назад</a>
+									</div>
+								";
 						}
 						elseif (isset($_GET['discipline'])) {
 							$discipline = $_GET['discipline'];
 							$count = mysqli_query($conn, "SELECT COUNT(*) FROM `concepts` WHERE discipline_section='$discipline'");
 							$result = mysqli_query($conn, "SELECT * FROM `concepts` WHERE discipline_section='$discipline'");
+							echo "
+									<div class='back'>
+										<a href='index.php' class='text'>Назад</a>
+									</div>
+								";
 						} else {
 							$count = mysqli_query($conn, "SELECT COUNT(*) FROM `concepts`");
 							$result = mysqli_query($conn, "SELECT * FROM `concepts`");

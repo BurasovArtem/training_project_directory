@@ -125,6 +125,21 @@ main {
     display: flex;
     flex-direction: column;
   }
+    main .directory .back {
+      display: flex;
+      justify-content: flex-end;
+    }
+      main .directory .back .text {
+        text-decoration: underline;
+        outline: none;
+        cursor: pointer;
+        color: red;
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+        main .directory .back .text:hover {
+          text-decoration: none;
+        }
     main .directory .count {
       width: 100%;
       border-bottom: 1px solid grey;

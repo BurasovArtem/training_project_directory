@@ -1,0 +1,246 @@
+@font-face {
+  font-family: "MontserratRegular";
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+  src: url("fonts/Montserrat-Regular.ttf") format("truetype"); 
+}
+
+@font-face {
+  font-family: "MontserratMedium";
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+  src: url("fonts/Montserrat-Medium.ttf") format("truetype"); 
+}
+
+@font-face {
+  font-family: "MontserratSemiBold";
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+  src: url("fonts/Montserrat-SemiBold.ttf") format("truetype"); 
+}
+
+@font-face {
+  font-family: "MontserratBold";
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+  src: url("fonts/Montserrat-Bold.ttf") format("truetype"); 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: MontserratMedium;
+  text-decoration: none;
+}
+
+body {
+  background-color: #f0f3f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  height: 10vh;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 .2857142857rem .5rem rgba(0,0,0,.1);
+}
+  header .title {
+    margin: 0 30px;
+    text-align: center;
+  }
+    header .title a {
+      outline: none;
+      text-decoration: none;
+      color: black;
+      cursor: pointer;
+    }
+  header .nav {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+  }
+    header .nav .item {
+      margin: 20px;
+      cursor: pointer;
+      text-align: center;
+    }
+      header .nav .item a { color: black; outline: none; }
+      header .nav .item a:hover { color: #f5b618; }
+
+main {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  width: 1200px;
+  min-height: 80vh;
+  background-color: #FFFFFF;
+  border-radius: 7px;
+  box-shadow: 2px 2px 9px rgba(50, 57, 87, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+  main .search { margin: 30px 0; }
+    main .search p {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+    }
+      main .search p input[type="search"] {
+        width: calc(400px - 20px);
+        height: 40px;
+        border-radius: 20px 0 0 20px;
+        outline: none;
+        padding: 0 20px;
+        border-left: 3px solid #fad46e;
+        border-top: 3px solid #fad46e;
+        border-bottom: 3px solid #fad46e;
+        border-right: none;
+      }
+      main .search p input[type="submit"] {
+        height: 40px;
+        width: 150px;
+        cursor: pointer;
+        border-radius: 0 20px 20px 0;
+        outline: none;
+        background-color: #fad46e;
+        border: none;
+        font-family: MontserratBold;
+      }
+        main .search p input[type="submit"]:hover {
+          background-color: #f5b618;
+        }
+  main .directory {
+    width: 1000px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+    main .directory .count {
+      width: 100%;
+      border-bottom: 1px solid grey;
+      padding: 10px 0;
+    }
+    main .directory .definition_container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+      main .directory .definition_container .definition_link {
+        outline: none;
+        text-decoration: none;
+        color: black;
+      }
+      main .directory .definition_container .definition_item {
+        width: 100%;
+        height: auto;
+        padding: 30px 0;
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid grey;
+        cursor: pointer;
+      }
+        main .directory .definition_container .definition_link:last-child .definition_item { border-bottom: none; }
+        main .directory .definition_container .definition_item .text {
+          width: 700px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+          main .directory .definition_container .definition_item .text .title { font-size: 32px; }
+          main .directory .definition_container .definition_item .text .description {
+            font-size: 16px;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            padding-right: 50px;
+          }
+          main .directory .definition_container .definition_item .text .discipline_section {  }
+        main .directory .definition_container .definition_item .image { width: 300px; }
+
+main .definition {
+  width: 100%;
+  min-height: 80vh;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+  main .definition .back {
+    width: 1150px;
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+  }
+    main .definition .back .text {
+      text-decoration: underline;
+      outline: none;
+      cursor: pointer;
+      color: red;
+      font-size: 18px;
+    }
+      main .definition .back .text:hover {
+        text-decoration: none;
+      }
+  main .definition .definition_container {
+    display: flex;
+    width: 1200px;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+    main .definition .definition_container .item_info {
+      width: 700px;
+    }
+      main .definition .definition_container .item_info .title {
+        font-size: 32px;
+        font-family: MontserratBold;
+        margin: 20px 0;
+      }
+      main .definition .definition_container .item_info .description {
+        font-size: 16px;
+        line-height: 24px;
+      }
+      main .definition .definition_container .item_info .examples {
+        font-size: 16px;
+        margin: 20px 0;
+      }
+    main .definition .definition_container .item_image {
+      width: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+      main .definition .definition_container .item_image img { width: 400px; }
+  main .definition .similar {
+    width: 1150px;
+    height: 100%;
+  }
+    main .definition .similar .title {
+      font-size: 18px;
+      font-family: MontserratSemiBold;
+      margin-top: 20px;
+    }
+    main .definition .similar .similar_container {
+      display: flex;
+      flex-direction: row;
+    }
+      main .definition .similar .similar_container .similar_item { 
+        margin: 20px; 
+        outline: none;
+        color: blue;
+        text-decoration: underline;
+      }
+        main .definition .similar .similar_container .similar_item:hover { text-decoration: none; }
+        main .definition .similar .similar_container .similar_item:first-child { margin-left: 0px; }

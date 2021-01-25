@@ -1,14 +1,14 @@
 <?php
-
 	$dbhost = 'localhost';
 	$dbuser = 'root';
 	$dbpass = '';
 	$dbname = 'electronic_directory';
 	$conn = mysqli_connect($dbhost, $dbuser, $dbpass);
-
+	
 	if(!$conn) {
 		echo 'Connected failure<br>';
 	}
+	
 	echo 'Connected successfully\n';
 	$sql = "DROP DATABASE IF EXISTS electronic_directory";
 	mysqli_query($conn, $sql);
@@ -47,7 +47,7 @@
 	mysqli_close($conn);
 
 	function importFromCSV($link, $fileName, $tableName) {
-		$sql = "LOAD DATA INFILE '../../htdocs/training_project_directory/php/".$fileName."'
+		$sql = "LOAD DATA INFILE '../../htdocs/training_project_directory/php/tables/".$fileName."'
 				INTO TABLE ".$tableName." 
 				FIELDS TERMINATED BY ',' 
 				ENCLOSED BY '\"'";
